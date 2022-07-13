@@ -58,7 +58,7 @@ echo -e "CONFIGURANDO IPTABLES..."
 ipt_set () {
 cd /etc
 rm -rf rc.local
-wget https://github.com/kmardhex/slowdns/raw/main/rc.local
+wget https://github.com/leitura/slowdns/raw/main/rc.local
 chmod +x /etc/rc.local
 systemctl enable rc-local
 systemctl start rc-local
@@ -74,8 +74,8 @@ touch infons
 echo $nameserver > infons
 set_ns () {
 sleep 1
-wget https://raw.githubusercontent.com/kmardhex/slowdns/main/ssl/startdns 
-wget https://raw.githubusercontent.com/kmardhex/slowdns/main/ssl/restartdns
+wget https://raw.githubusercontent.com/leitura/slowdns/main/ssl/startdns 
+wget https://raw.githubusercontent.com/leitura/slowdns/main/ssl/restartdns
 chmod +x startdns
 chmod +x restartdns
 sed -i "s;1234;$nameserver;g" /etc/slowdns/startdns > /dev/null 2>&1
@@ -177,8 +177,8 @@ Opcao3 () {
 echo -e "Baixando par de chaves padrão..."
 cd
 rm server.key server.pub
-wget https://raw.githubusercontent.com/kmardhex/slowdns/main/server.key
-wget https://raw.githubusercontent.com/kmardhex/slowdns/main/server.pub
+wget https://raw.githubusercontent.com/leitura/slowdns/main/server.key
+wget https://raw.githubusercontent.com/leitura/slowdns/main/server.pub
 cp server.key /etc/slowdns/ && cp server.pub /etc/slowdns/
 sleep 1
 echo -e "Download Concluído"
@@ -259,8 +259,8 @@ slowdns
 opc_key2 () {
 echo -e "Baixando par de chaves padrão..."
 cd
-wget https://raw.githubusercontent.com/kmardhex/slowdns/main/server.key
-wget https://raw.githubusercontent.com/kmardhex/slowdns/main/server.pub
+wget https://raw.githubusercontent.com/leitura/slowdns/main/server.key
+wget https://raw.githubusercontent.com/leitura/slowdns/main/server.pub
 sleep 1
 echo -e "Download Concluído"
 sleep 1
